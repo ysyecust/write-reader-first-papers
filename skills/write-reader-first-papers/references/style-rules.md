@@ -1,0 +1,178 @@
+# Reader-first academic style rules
+
+## 1. Write the proposition directly
+
+Use affirmative sentences that say what the work does.
+
+Avoid using contrast as a default rhetorical engine:
+
+- not X but Y
+- not merely X; rather, Y
+- not only X but also Y
+- 与其说……不如说……
+- 不是……而是……
+- 并非……而是……
+- 不仅……而且……
+
+Keep a contrast only when readers must distinguish two experimentally different claims. Otherwise state Y directly.
+
+Bad:
+
+> The proposed method is not merely accurate but also practically useful.
+
+Better:
+
+> The proposed method reduces median error by 18% and runs within the available memory limit.
+
+Bad:
+
+> 这不是一次性的试错，而是一种可持续积累的过程。
+
+Better:
+
+> 该过程保存每次验证通过的规则，并将其用于后续案例。
+
+## 2. Explain consequences instead of announcing distinctions
+
+Delete empty metacommentary such as:
+
+- This distinction is important.
+- It is worth noting that...
+- Importantly / Notably / Crucially...
+- 需要指出的是……
+- 值得注意的是……
+- 这一区分十分重要。
+
+State what changes:
+
+Bad:
+
+> Each result has a route and a validation level. This distinction is important.
+
+Better:
+
+> The route records how much of the original case was reused; the validation level records whether the result opened, solved, preserved structure, and reproduced numerical outputs.
+
+## 3. Translate internal language into reader language
+
+Do not expose an internal label before its meaning.
+
+Bad:
+
+> Variant B is evaluated on the matched test set.
+
+Better:
+
+> All methods are evaluated on the same 240 held-out samples. Section 3.2 explains how those samples were selected.
+
+When a label is needed later:
+
+> The retrieval-assisted configuration, called Variant B below, adds retrieved examples before inference.
+
+Watch for unexplained labels such as Variant A, Stage 2, Level 3, Exp-4, matched set, development set, artifact, fidelity score, and sentinel case. Define or replace them according to audience.
+
+## 4. Make terms concrete
+
+Use general terms consistently. A method is a procedure, a model is a representation, a system is an implemented collection of components, a dataset is a defined set of observations, and a workflow is an ordered set of actions. If a paper gives any term a narrower meaning, define it once and keep that meaning.
+
+Prefer verbs and observable outcomes:
+
+- “the simulator opens and solves the case” over “execution feasibility is established”
+- “the script compares streams one by one” over “stream-level fidelity assessment is performed”
+- “尝试次数上限” over “尝试预算”
+- “执行脚本” over “运行器”
+- “可逐项比对” over “可差分比较”
+- “能够说明的问题” over “支持的主张” when writing for a broad Chinese audience
+
+## 5. Give each sentence one main job
+
+Break a sentence when it simultaneously defines a method, reports three results, adds a caveat, and interprets the result.
+
+For English, investigate sentences above roughly 40 words. For Chinese, investigate sentences above roughly 90 characters. These are review thresholds, not hard limits.
+
+Prefer explicit subjects. Replace repeated “this,” “it,” “these results,” “该方法,” “这一点,” and “其” when the referent could be ambiguous.
+
+## 6. Remove common AI voice
+
+Treat these as warning signs when they add no precise meaning:
+
+- delve, landscape, pivotal, transformative, holistic, seamless
+- robust, comprehensive, systematic, effective, significant without a metric
+- underscores, highlights, showcases, serves as, paves the way
+- moreover, furthermore, notably, importantly at every paragraph opening
+- “a wide range of,” “in the context of,” “in order to,” “it can be seen that”
+- “系统性地、全面地、有效地、显著地” without evidence
+- rigid three-part lists and repeated sentence templates
+- promotional endings that repeat “future work” without naming a test
+
+Use technical adjectives only when the paper defines or measures them.
+
+## 7. Frame numbers as evidence
+
+For every headline number, answer:
+
+1. What was measured?
+2. Compared with what?
+3. On which denominator or sample?
+4. Why does the change matter?
+
+Use one or two memorable numbers in an abstract. Put detailed route results, confidence intervals, ablations, and secondary checks in results or tables.
+
+Do not hide conditioning that changes interpretation. Explain sampling in methods and use the shortest accurate wording in abstracts or highlights.
+
+## 8. Be confident without becoming defensive
+
+State the contribution first. State the tested boundary later in direct language.
+
+Weak and defensive:
+
+> Before broader conclusions can be drawn, independent acquisition runs and additional simulators are required.
+
+Reader-first:
+
+> The current study establishes the framework on two simulators and their official archives. Independent runs, user-built flowsheets, and additional simulators are the next tests of transfer.
+
+Do not foreground a weak or special-case result when it is not the paper’s central contribution. Do not conceal it when it defines the claim boundary.
+
+## 9. Optimize for humans and machines
+
+A human reader needs motivation, causal flow, and concrete language. An AI reader needs stable terms, explicit entities, denominators, and unambiguous references.
+
+Write claims in a parseable form:
+
+> Across 12 datasets, the proposed calibration reduces median absolute error from 0.42 to 0.31.
+
+Avoid:
+
+> This improvement further confirms its substantial value under the selected setting.
+
+## 10. Preserve a human authorial voice
+
+- Vary paragraph and sentence length naturally.
+- Use the terminology that practitioners actually use.
+- Prefer a precise ordinary word over a coined compound.
+- Read the sentence aloud. Rewrite it if a domain author would not say it in a seminar.
+- Let a paragraph end with its finding or consequence, not a generic claim of importance.
+- Do not over-polish direct technical prose into ornate academic language.
+
+## 11. Check the handoff between sentences
+
+Individually correct sentences can still form a paragraph that feels abrupt. For every adjacent pair, ask whether the first sentence gives the reader a reason to expect the concept introduced by the second.
+
+Keep each paragraph on one level of the argument:
+
+- A problem paragraph states the required capability, the practical obstacle, and its consequence.
+- A method paragraph introduces the proposed mechanism before discussing that mechanism's numerical difficulty.
+- A results paragraph states the measured outcome before interpretation or qualification.
+
+Bad:
+
+> Local optimization can converge to different stationary points. The solution path can turn.
+
+The second sentence assumes a continuation construction that has not been introduced.
+
+Better:
+
+> Local optimization can converge to different stationary points. We therefore connect the target objective to a simpler reference objective. Because the resulting solution path can turn, we track it with an arc-length parameter.
+
+Reread paragraph openings and sentence transitions manually. Mechanical phrase matching cannot determine whether the reader has been prepared for a new concept.
