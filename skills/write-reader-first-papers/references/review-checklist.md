@@ -1,5 +1,13 @@
 # Final review checklist
 
+## Scope and source fidelity
+
+- [ ] The review-only, language-only, or structural edit contract was identified before work began.
+- [ ] Review-only work did not modify content files or silently substitute a rewritten manuscript for findings.
+- [ ] Language-only work preserved document structure, information density, unaffected wording, and deliberate author or venue conventions except where the user explicitly requested a change.
+- [ ] Relevant writing guides, terminology policies, venue conventions, and verified author samples were consulted when available.
+- [ ] Every new or strengthened factual proposition, entity, number, date, quotation, citation, and causal link is traceable to the provided source.
+
 ## Argument
 
 - [ ] The opening explains the need before implementation details.
@@ -22,6 +30,7 @@
 - [ ] Long, clause-heavy sentences have been reviewed aloud.
 - [ ] Promotional and generic AI phrases have been removed or supported by metrics.
 - [ ] Paragraph openings and endings do not repeat a mechanical template.
+- [ ] Long sentences, passive voice, nominalization, questions, metaphors, repeated nouns, and sentence-length patterns were not changed merely because they were suspected AI tells.
 
 ## Claims and evidence
 
@@ -57,6 +66,7 @@
 
 - [ ] The manuscript was reread through the logic, meaning, syntax, evidence, attribution, and voice lenses.
 - [ ] Contribution attribution was checked against the final design and valid final evidence, plus valid comparisons and correction records when applicable.
+- [ ] The final diff was checked against the edit contract, and incidental edits outside the authorized scope were reverted.
 - [ ] Available source validators or compilers were run; unavailable checks are identified.
 - [ ] Undefined references and citations were checked when the document format supports them.
 - [ ] Rendered text was reread when a rendered document was available.

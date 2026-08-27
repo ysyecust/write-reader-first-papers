@@ -1,5 +1,11 @@
 # Reader-first academic style rules
 
+## Respect source style and edit scope
+
+When a project supplies a writing guide, venue convention, terminology policy, or verified author sample, use it to interpret the author’s intended voice. Generic AI-voice warnings must not erase a deliberate punctuation habit, sentence pattern, disciplinary convention, or level of formality.
+
+For language-only cleanup, intervene minimally. Preserve the document structure, information density, and unaffected wording unless the user explicitly requests shortening or expansion. A clearer paraphrase may use different words, but every new factual proposition, entity, number, date, quotation, citation, and causal relation must remain traceable to the source.
+
 ## 1. Write the proposition directly
 
 Use affirmative sentences that say what the work does.
@@ -102,10 +108,16 @@ Treat these as warning signs when they add no precise meaning:
 - moreover, furthermore, notably, importantly at every paragraph opening
 - “a wide range of,” “in the context of,” “in order to,” “it can be seen that”
 - “系统性地、全面地、有效地、显著地” without evidence
+- empty labels such as “the key is:” or “原因如下：” that merely announce the next sentence or list
+- repeated paragraph openings such as “moreover,” “therefore,” “此外,” or “因此” when they act as decorative road signs rather than logical transitions
+- “this means,” “this shows,” “这意味着,” or “这表明” when the sentence only restates the preceding result
+- reveal-style dashes or colon-led list introductions that add emphasis without adding a logical relation
 - rigid three-part lists and repeated sentence templates
 - promotional endings that repeat “future work” without naming a test
 
 Use technical adjectives only when the paper defines or measures them.
+
+Do not use sentence length, passive voice, nominalization, question headings, metaphors, repeated full nouns, body-level sequence words, or uniform or varied sentence length as automatic evidence of AI writing. These are ordinary writing devices. Revise them only when the particular use obscures meaning, creates a false claim, breaks the author’s style, or produces a demonstrably mechanical passage.
 
 ## 7. Frame numbers as evidence
 
@@ -208,3 +220,5 @@ Better:
 > Local optimization can converge to different stationary points. We therefore connect the target objective to a simpler reference objective. Because the resulting solution path can turn, we track it with an arc-length parameter.
 
 Reread paragraph openings and sentence transitions manually. Mechanical phrase matching cannot determine whether the reader has been prepared for a new concept.
+
+Also compare the grammatical shape of adjacent sentences. If two or more sentences repeat the same clause order, punctuation pattern, and ending without a deliberate rhetorical purpose, change the smallest number of sentences needed to break the template. Preserve deliberate parallelism in definitions, procedures, legal clauses, and compact comparison lists.

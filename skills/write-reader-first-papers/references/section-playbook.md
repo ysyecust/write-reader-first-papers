@@ -1,5 +1,7 @@
 # Section playbook
 
+Use these section patterns as diagnostic guides, not mandatory templates. Reorder existing sections or paragraphs only when the edit contract authorizes structural revision. In language-only mode, use the playbook to identify missing logic but report the structural issue instead of silently rebuilding the document.
+
 ## Abstract
 
 Use this order unless the venue or study requires another:
@@ -116,6 +118,7 @@ In a rebuttal or revision summary, state reviewer-requested corrections and thei
 ## Bilingual synchronization
 
 - Choose the scientific source version before editing.
+- Read any project style guide and verified author samples for both languages; do not force one language’s sentence rhythm or punctuation habits onto the other.
 - Maintain a project-specific term map for method names, datasets, metrics, baselines, stages, experimental conditions, abbreviations, and domain terms.
 - Translate meaning and claim strength, not English syntax.
 - Replace awkward Chinese calques with ordinary technical Chinese.

@@ -35,9 +35,14 @@ Apply these priorities in order:
 - Read the requested passage plus enough surrounding text to understand its role.
 - Inspect tables, figures, supplementary files, and evidence records before changing factual claims.
 - Record protected items: numbers, denominators, statistical qualifiers, method definitions, citation keys, labels, and cross-references.
+- If the project provides a writing guide, terminology policy, venue template, or verified samples from the author, read the relevant source before editing. Treat deliberate authorial and venue conventions as evidence, not as defects. They do not override scientific truth or the user’s explicit instructions.
+- Set the edit contract before changing anything:
+  - **Review-only:** return findings and evidence without changing files or silently supplying a rewritten manuscript.
+  - **Language-only or final cleanup:** preserve section order, paragraph order, lists, tables, quotations, code blocks, and information density unless the user explicitly requests shortening or expansion. Change only the smallest span needed to resolve an identified language problem.
+  - **Structural revision:** reorganize only the scope the user authorized, while preserving protected facts and claim strength.
+- Trace every new or strengthened factual proposition, entity, number, date, quotation, citation, and causal link to a source in the provided materials. If it cannot be traced, do not add it; report the evidence gap instead.
 - Distinguish design rationale and final validated behavior from development history such as issue threads, commits, failed runs, and debugging notes. Development records may establish provenance or expose an error; they do not by themselves establish novelty or value.
 - For each contribution, novelty, or value claim, identify the pre-existing problem, the final mechanism or finding, and the supporting evidence. When the claim is comparative, also identify the valid comparison. Ask whether the difficulty would still exist in a correct implementation or valid baseline.
-- Determine whether the task authorizes critique only, wording edits, structural reordering, or claim changes.
 
 ### 2. Build the reader’s argument map
 
@@ -82,6 +87,7 @@ Do not polish every sentence into the same rhythm. Preserve natural variation an
 ### 5. Verify the delivered document
 
 - Search again for rejected phrases, inconsistent terms, unexplained labels, and obsolete wording.
+- Compare the final diff with the edit contract. For review-only work, confirm that no content file changed. For language-only work, revert incidental edits to structure, untouched sentences, information density, or author-specific style outside the operation the user requested.
 - Search contribution lists, abstracts, highlights, conclusions, cover letters, and rebuttals for claims based on “we encountered,” “we fixed,” repeated attempts, debugging effort, or comparison with an erroneous earlier build. Reclassify them using [references/style-rules.md](references/style-rules.md).
 - Confirm that any material correction is disclosed in the appropriate method, reproducibility, validity, or revision record and that the reported evidence comes from the corrected implementation.
 - When the required tools are available, compile source documents and check undefined citations and references separately from prose quality.
@@ -105,6 +111,8 @@ Do not polish every sentence into the same rhythm. Preserve natural variation an
 - Explain an interface or mechanism by what it allows and prevents. Avoid unexplained acronyms in abstracts and highlights.
 - Pair headline numbers with the measured quantity, comparison, sample, and meaning. Do not turn abstracts and conclusions into ledgers.
 - Present limitations after the demonstrated value. State the tested scope directly and name the next test.
+- Do not treat sentence length, passive voice, nominalization, question headings, metaphors, repeated nouns, or regular sentence rhythm as AI evidence by themselves. Change them only when they cause a specific problem in meaning, logic, emphasis, or readability.
+- In language-only mode, leave text that does not exhibit an identified problem unchanged. Do not use “human voice” as permission to add anecdotes, first-person language, casual phrasing, examples, or concrete details that the source does not contain.
 - Do not present debugging effort, failed attempts, author-introduced defects, or fixes that merely restore the intended specification as scientific or engineering contributions.
 - A failure first noticed during development may motivate a real contribution only when it persists in a correct implementation or valid baseline, the response remains part of the final design, and corrected experiments isolate its effect.
 - Never claim improvement by comparing the corrected system with its own erroneous version. Use a valid baseline and rerun every affected result.
@@ -112,6 +120,8 @@ Do not polish every sentence into the same rhythm. Preserve natural variation an
 - Avoid blanket deletion of every negative word. Preserve necessary scientific distinctions, failure results, and boundary conditions.
 
 ## Output expectations
+
+When reviewing without edit authorization, provide prioritized findings with locations, supporting evidence, and recommended action. Do not include a rewritten manuscript unless the user requests one.
 
 When editing files, provide:
 

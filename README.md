@@ -15,6 +15,8 @@ model-specific API.
 ## What it does
 
 - Protects numbers, denominators, citations, terminology, and claim boundaries.
+- Respects verified author and venue style while limiting language-only cleanup to
+  the smallest necessary edits.
 - Separates intentional research and engineering contributions from implementation
   mistakes, debugging effort, and corrective maintenance.
 - Reorganizes arguments around the order in which readers need information.
@@ -32,7 +34,8 @@ detectors, disguise authorship, or invent a human writing history.
 
 The skill applies a reader-first sequence:
 
-1. Establish the source of truth and protect factual content.
+1. Establish the source of truth, author or venue style, and the authorized edit
+   contract before changing content.
 2. Map the need, obstacle, proposed work, evidence, value, and boundary, then
    classify claimed advances by their source.
 3. Diagnose reader friction through logic, meaning, syntax, evidence,
@@ -107,6 +110,16 @@ Example requests:
   repeating numbers.”
 - “Check whether the contribution list mistakes our own debugging and bug fixes
   for innovations in the final method.”
+- “Review only: identify reader friction and unsupported claims without changing
+  the manuscript.”
+
+## Design influence
+
+The scope-controlled language cleanup and negative-control rules were informed by
+[lieflat-less-ai-tone](https://github.com/larashero3-dotcom/lieflat-less-ai-tone),
+an MIT-licensed Chinese editing skill. This project adapts its minimal-edit and
+information-conservation ideas to academic writing; it does not import that
+project’s corpus frequencies or treat its Chinese detection list as universal.
 
 ## Repository structure
 
