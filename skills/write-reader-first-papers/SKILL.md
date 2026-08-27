@@ -1,6 +1,6 @@
 ---
 name: write-reader-first-papers
-description: Rewrite, restructure, translate, or audit academic manuscripts so first-time readers can identify the problem, contribution, evidence, value, and limitations without decoding internal jargon or formulaic prose. Use for English or Chinese papers, abstracts, introductions, methods, results, conclusions, highlights, captions, tables, supplementary information, cover letters, rebuttals, and bilingual synchronization when the user asks for clearer language, natural authorial voice, direct wording, “说人话”, removal of unnecessary “not X but Y” or “不是……而是……” constructions, reader-first organization, or a final prose review.
+description: Rewrite, restructure, translate, or audit academic manuscripts so first-time readers can identify the problem, contribution, evidence, value, and limitations without decoding internal jargon or formulaic prose. Use for English or Chinese papers, abstracts, introductions, methods, results, conclusions, highlights, captions, tables, supplementary information, cover letters, rebuttals, and bilingual synchronization when the user asks for clearer language, natural authorial voice, direct wording, “说人话”, removal of unnecessary “not X but Y” or “不是……而是……” constructions, reader-first organization, a final prose review, or a contribution audit that separates research and engineering contributions from implementation mistakes, debugging effort, and corrective maintenance.
 ---
 
 # Write Reader-First Papers
@@ -20,12 +20,13 @@ Read [references/review-checklist.md](references/review-checklist.md) before the
 Apply these priorities in order:
 
 1. Preserve scientific truth, numbers, denominators, citations, labels, and claim boundaries.
-2. Let a reader understand why the work matters, what was built, how it was tested, and what changed.
-3. State the positive proposition directly. Use contrast only when the distinction changes the scientific claim.
-4. Introduce plain meaning before project-specific names, abbreviations, stages, variants, or experiment codes.
-5. Make every important sentence easy to parse as subject, action, object, and consequence.
-6. Keep caveats accurate and proportionate. Do not turn honesty into self-defeating prose.
-7. Keep English and Chinese aligned in meaning, strength, numbers, and terminology.
+2. Attribute contribution to the final method, architecture, algorithm, dataset, or finding—not to effort spent correcting an implementation mistake. A change that only restores intended behavior is a correction, not an innovation.
+3. Let a reader understand why the work matters, what was built, how it was tested, and what changed.
+4. State the positive proposition directly. Use contrast only when the distinction changes the scientific claim.
+5. Introduce plain meaning before project-specific names, abbreviations, stages, variants, or experiment codes.
+6. Make every important sentence easy to parse as subject, action, object, and consequence.
+7. Keep caveats accurate and proportionate. Do not turn honesty into self-defeating prose.
+8. Keep English and Chinese aligned in meaning, strength, numbers, and terminology.
 
 ## Workflow
 
@@ -34,6 +35,8 @@ Apply these priorities in order:
 - Read the requested passage plus enough surrounding text to understand its role.
 - Inspect tables, figures, supplementary files, and evidence records before changing factual claims.
 - Record protected items: numbers, denominators, statistical qualifiers, method definitions, citation keys, labels, and cross-references.
+- Distinguish design rationale and final validated behavior from development history such as issue threads, commits, failed runs, and debugging notes. Development records may establish provenance or expose an error; they do not by themselves establish novelty or value.
+- For each contribution, novelty, or value claim, identify the pre-existing problem, the final mechanism or finding, and the supporting evidence. When the claim is comparative, also identify the valid comparison. Ask whether the difficulty would still exist in a correct implementation or valid baseline.
 - Determine whether the task authorizes critique only, wording edits, structural reordering, or claim changes.
 
 ### 2. Build the reader’s argument map
@@ -43,6 +46,8 @@ Write a one-line answer for each applicable question:
 - What need or problem makes this work worth doing now?
 - Why is the task difficult in practice?
 - What framework, method, or system was created?
+- Which difficulties belong to the research problem or a valid baseline, and which were introduced by the authors’ implementation, configuration, data handling, or experimental setup?
+- Which claimed mechanisms remain part of the final work, and what evidence establishes their effect? When the effect is comparative, which valid comparison isolates it?
 - What changes when it is used?
 - What evidence supports that change?
 - What can readers use the result for?
@@ -52,29 +57,33 @@ Reorder sections or paragraphs when the manuscript presents evaluation details b
 
 ### 3. Diagnose reader friction
 
-Read the text through five lenses:
+Read the text through six lenses:
 
 1. **Logic:** does the reader encounter the need, method, and evidence in the order required to understand them?
 2. **Meaning:** does every internal term have a plain-language meaning before its abbreviation or label?
 3. **Syntax:** can each sentence be parsed without rereading, and does each pronoun have a clear referent?
 4. **Evidence:** can every quantitative or causal statement be traced to a stated comparison, sample, or source?
-5. **Voice:** does the prose sound like a knowledgeable author explaining the work, rather than a template announcing importance?
+5. **Attribution:** does each contribution solve a problem that exists independently of an accidental defect, and is it supported by valid final evidence rather than a comparison with the broken version?
+6. **Voice:** does the prose sound like a knowledgeable author explaining the work, rather than a template announcing importance?
 
 ### 4. Revise in separate passes
 
 1. **Structure pass:** fix section order and paragraph sequence.
 2. **Argument pass:** give each paragraph one job and connect evidence to its meaning.
-3. **Transition pass:** inspect every sentence handoff. Move a method-specific mechanism or failure mode after the method and its purpose have been introduced.
-4. **Terminology pass:** define terms and replace internal shorthand with reader-facing language.
-5. **Sentence pass:** remove mechanical contrast, vague subjects, unnecessary nominalization, filler, stacked clauses, and translation artifacts.
-6. **Evidence pass:** restore any lost qualifier and verify every number against the source.
-7. **Bilingual pass:** synchronize meaning sentence by sentence; do not let either version make a stronger claim.
+3. **Contribution pass:** classify every claimed advance as a research contribution, an intentional engineering contribution, a development correction, or process history. Remove corrective work and effort from contribution lists; retain material error disclosures where they affect interpretation or reproducibility.
+4. **Transition pass:** inspect every sentence handoff. Move a method-specific mechanism or failure mode after the method and its purpose have been introduced.
+5. **Terminology pass:** define terms and replace internal shorthand with reader-facing language.
+6. **Sentence pass:** remove mechanical contrast, vague subjects, unnecessary nominalization, filler, stacked clauses, and translation artifacts.
+7. **Evidence pass:** restore any lost qualifier, verify every number against the source, and exclude or rerun results affected by implementation or experimental errors.
+8. **Bilingual pass:** synchronize meaning sentence by sentence; do not let either version make a stronger claim.
 
 Do not polish every sentence into the same rhythm. Preserve natural variation and the author’s domain voice.
 
 ### 5. Verify the delivered document
 
 - Search again for rejected phrases, inconsistent terms, unexplained labels, and obsolete wording.
+- Search contribution lists, abstracts, highlights, conclusions, cover letters, and rebuttals for claims based on “we encountered,” “we fixed,” repeated attempts, debugging effort, or comparison with an erroneous earlier build. Reclassify them using [references/style-rules.md](references/style-rules.md).
+- Confirm that any material correction is disclosed in the appropriate method, reproducibility, validity, or revision record and that the reported evidence comes from the corrected implementation.
 - When the required tools are available, compile source documents and check undefined citations and references separately from prose quality.
 - When a rendered document is available, reread its extracted text and inspect changed pages at their final size.
 - Report content edits, evidence checks, compilation, and rendered-page review as separate gates. Mark unavailable gates as not run rather than silently treating them as passed.
@@ -96,6 +105,9 @@ Do not polish every sentence into the same rhythm. Preserve natural variation an
 - Explain an interface or mechanism by what it allows and prevents. Avoid unexplained acronyms in abstracts and highlights.
 - Pair headline numbers with the measured quantity, comparison, sample, and meaning. Do not turn abstracts and conclusions into ledgers.
 - Present limitations after the demonstrated value. State the tested scope directly and name the next test.
+- Do not present debugging effort, failed attempts, author-introduced defects, or fixes that merely restore the intended specification as scientific or engineering contributions.
+- A failure first noticed during development may motivate a real contribution only when it persists in a correct implementation or valid baseline, the response remains part of the final design, and corrected experiments isolate its effect.
+- Never claim improvement by comparing the corrected system with its own erroneous version. Use a valid baseline and rerun every affected result.
 - Avoid grand claims, invented novelty, unsupported causality, and silent strengthening during translation.
 - Avoid blanket deletion of every negative word. Preserve necessary scientific distinctions, failure results, and boundary conditions.
 
@@ -106,6 +118,7 @@ When editing files, provide:
 - the revised files;
 - a concise account of the argument or wording changes;
 - protected facts that were checked;
+- contribution claims that were retained, reclassified, removed, or left unresolved, including any development error that affected reported evidence;
 - compilation and rendered-text results;
 - any unresolved claim, terminology, or submission-policy issue.
 

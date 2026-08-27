@@ -15,6 +15,8 @@ model-specific API.
 ## What it does
 
 - Protects numbers, denominators, citations, terminology, and claim boundaries.
+- Separates intentional research and engineering contributions from implementation
+  mistakes, debugging effort, and corrective maintenance.
 - Reorganizes arguments around the order in which readers need information.
 - Rewrites awkward, overly defensive, promotional, or template-like prose.
 - Replaces unexplained internal labels with reader-facing language.
@@ -31,10 +33,12 @@ detectors, disguise authorship, or invent a human writing history.
 The skill applies a reader-first sequence:
 
 1. Establish the source of truth and protect factual content.
-2. Map the need, obstacle, proposed work, evidence, value, and boundary.
-3. Diagnose reader friction through logic, meaning, syntax, evidence, and voice.
-4. Revise structure, argument flow, transitions, terminology, sentences, and
-   bilingual alignment in separate passes.
+2. Map the need, obstacle, proposed work, evidence, value, and boundary, then
+   classify claimed advances by their source.
+3. Diagnose reader friction through logic, meaning, syntax, evidence,
+   contribution attribution, and voice.
+4. Revise structure, argument flow, contribution attribution, transitions,
+   terminology, sentences, and bilingual alignment in separate passes.
 5. Report content, evidence, compilation, rendering, and submission checks as
    separate verification gates.
 
@@ -101,6 +105,8 @@ Example requests:
 - “Synchronize the English and Chinese versions without strengthening claims.”
 - “Check whether the conclusion explains the value of the work rather than
   repeating numbers.”
+- “Check whether the contribution list mistakes our own debugging and bug fixes
+  for innovations in the final method.”
 
 ## Repository structure
 

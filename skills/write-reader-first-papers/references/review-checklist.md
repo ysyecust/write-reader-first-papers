@@ -4,6 +4,8 @@
 
 - [ ] The opening explains the need before implementation details.
 - [ ] The framework or method appears before its evaluation machinery.
+- [ ] Each listed contribution addresses a research or engineering need that exists independently of an author-introduced defect.
+- [ ] The claimed mechanism remains part of the final work; debugging effort and corrective maintenance are not presented as value.
 - [ ] Every section has a clear reader question or claim.
 - [ ] Each paragraph has one main job, and adjacent sentences hand off naturally.
 - [ ] Method-specific mechanisms and their failure modes appear only after the method is introduced.
@@ -25,6 +27,10 @@
 
 - [ ] Numbers and denominators match source evidence.
 - [ ] Sampling conditions that affect interpretation remain visible.
+- [ ] Each contribution claim identifies a final mechanism or finding and supporting evidence from the valid final implementation or analysis.
+- [ ] Improvements use valid baselines or ablations, never the authors’ erroneous earlier version.
+- [ ] Results affected by code, configuration, data, or setup errors were rerun or excluded.
+- [ ] Material corrections are disclosed with their affected scope and are not renamed as innovation, robustness, or adaptation.
 - [ ] Correlation, attribution, transfer, and generalization claims match the experiment.
 - [ ] Limitations define scope without becoming the headline.
 - [ ] No edit invents novelty, causality, reproducibility, or external validity.
@@ -33,6 +39,7 @@
 
 - [ ] The abstract fits the venue limit and defines abbreviations.
 - [ ] Highlights are standalone and fit the character limit.
+- [ ] Abstracts, highlights, contribution lists, conclusions, and cover letters describe the final work rather than its debugging history.
 - [ ] Keywords use field-standard terms.
 - [ ] Captions are concise and tables/figures are cited before appearance.
 - [ ] Figure labels, leaders, curves, and markers do not collide at the final manuscript size.
@@ -48,7 +55,8 @@
 
 ## Verification gates
 
-- [ ] The manuscript was reread through the logic, meaning, syntax, evidence, and voice lenses.
+- [ ] The manuscript was reread through the logic, meaning, syntax, evidence, attribution, and voice lenses.
+- [ ] Contribution attribution was checked against the final design and valid final evidence, plus valid comparisons and correction records when applicable.
 - [ ] Available source validators or compilers were run; unavailable checks are identified.
 - [ ] Undefined references and citations were checked when the document format supports them.
 - [ ] Rendered text was reread when a rendered document was available.

@@ -12,6 +12,8 @@ Use this order unless the venue or study requires another:
 
 Define every abbreviation at first use. Replace platform-interface details with a brief functional explanation. Keep unfavorable boundary results secondary unless the boundary itself is the central finding. Check the venue word limit after editing.
 
+Do not promote implementation mistakes, debugging iterations, or corrective maintenance into the abstract’s problem, novelty, or value. If a material error affects the evidence, use the corrected evidence and disclose the affected scope in the appropriate reproducibility or validity statement.
+
 Give the opening problem paragraph one job. Do not introduce a coordinate, path failure, implementation constraint, or other mechanism specific to the proposed method before the method itself appears. In the method paragraph, state what the method does first, then explain the numerical obstacle and the component that resolves it.
 
 Keep the results paragraph selective. Report the evaluation scale, the primary outcome, and the comparison that establishes value; move secondary method-by-method percentages to the Results section.
@@ -26,11 +28,15 @@ Prefer three standalone items:
 
 Do not use internal variant names, unexplained experiment codes, isolated edge-case numbers, or dense qualifications. Make each item understandable to an editor who has not read the abstract. Check the venue character limit after rendering punctuation.
 
+Each highlight must describe the final work or its validated result. Exclude author effort, debugging chronology, and fixes that only restore intended behavior.
+
 ## Introduction
 
 Move through need, bottleneck, gap, proposed work, contribution, and headline evidence. Reuse the abstract’s logic without repeating its sentences.
 
 Explain domain or platform constraints by what they permit, prevent, or require. Introduce the proposed work before detailed evaluation protocols. End the introduction with concrete contributions or a compact roadmap only when it helps navigation.
+
+For each listed contribution, name the pre-existing research or engineering need, the final mechanism or finding, and the evidence. Do not list a bug fix, a repaired experiment, or the difficulty of development as a contribution.
 
 ## Methods
 
@@ -43,6 +49,8 @@ Explain the study in the order readers need:
 5. baselines, ablations, metrics, and statistical analysis.
 
 Do not make readers understand evaluation labels before they understand what is being evaluated.
+
+Describe the final reproducible method, not a success story assembled from debugging chronology. Include a development error only when readers need it to interpret data exclusions, changed results, reproducibility, or the difference between preregistered and executed procedures.
 
 ## Results
 
@@ -57,6 +65,8 @@ Build a question-and-answer chain. A useful order is:
 
 Open each subsection with the question or result, then present evidence, then interpretation. Keep diagnostic details after the headline result.
 
+Compare the final corrected implementation with valid baselines and ablations. Never use the authors’ erroneous earlier build as evidence of improvement. Rerun or exclude every result affected by a code, configuration, data, or setup error, and identify the affected scope.
+
 ## Discussion and limitations
 
 Name what the current evidence establishes. Then distinguish:
@@ -68,6 +78,8 @@ Name what the current evidence establishes. Then distinguish:
 - next experiment.
 
 Avoid apologies, speculative defenses, and a long list of every possible future study.
+
+When a material development error affects interpretation, distinguish the error, its correction, the results that were rerun or withdrawn, and the conclusion that remains supported. Do not rename the correction as robustness, adaptation, or innovation.
 
 ## Conclusion
 
@@ -98,6 +110,8 @@ Apply the same language standard as the main paper. Define reused labels again w
 ## Cover letter and submission text
 
 Lead with the problem, contribution, evidence breadth, and journal fit. Keep detailed internal numbers out unless one number materially attracts editorial interest. Keep the letter near one page. Distinguish the main manuscript, supplementary material, data or code availability, highlights, and declarations by their submission roles.
+
+In a rebuttal or revision summary, state reviewer-requested corrections and their effect directly. A corrected implementation can strengthen confidence in the revised evidence, but the act of fixing it is not a new contribution unless the revision introduces and evaluates a genuinely new method or capability.
 
 ## Bilingual synchronization
 

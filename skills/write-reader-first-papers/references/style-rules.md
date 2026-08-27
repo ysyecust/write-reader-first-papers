@@ -134,7 +134,39 @@ Reader-first:
 
 Do not foreground a weak or special-case result when it is not the paper’s central contribution. Do not conceal it when it defines the claim boundary.
 
-## 9. Optimize for humans and machines
+## 9. Separate contribution from development history
+
+Do not turn the authors’ development effort into a property of the research output. For every sentence that frames a challenge, fix, iteration, or recovery as novelty or value, classify what happened:
+
+- **Research contribution:** a method, model, algorithm, dataset, or analysis intentionally developed for a research problem, or a finding established from valid evidence about that problem.
+- **Engineering contribution:** an intentional architecture or system capability that meets a stated requirement independently of one accidental defect. Name its engineering scope and support its effect with evidence.
+- **Development correction:** a change to faulty code, configuration, data handling, experimental setup, or documentation that restores the intended specification. Report it as correction or quality control, not as contribution.
+- **Process history:** debugging time, repeated attempts, discarded implementations, and the sequence in which the authors found and fixed problems. Include it only when provenance, reproducibility, or interpretation requires it.
+
+Apply the relevant tests before retaining a contribution claim:
+
+1. **Independent-problem test:** would the difficulty remain under a correct implementation or valid experimental setup?
+2. **Final-design test:** does the proposed mechanism remain necessary and intentional in the final method or system?
+3. **Valid-comparison test:** when the claim is comparative, is the effect measured against a legitimate baseline or ablation rather than the authors’ broken earlier version?
+4. **Corrected-evidence test:** if an error affected the experiment, were the affected runs repeated after the error was removed, with the reported numbers drawn from the corrected runs?
+
+Failure during development is not automatically irrelevant. A valid baseline may expose a genuine numerical, scientific, or systems limitation, and debugging may reveal it. Claim the resulting contribution only from the independent problem, final mechanism, and valid final evidence—not from the difficulty or effort of discovering it.
+
+Bad:
+
+> After repeated parser failures, we developed an innovative repair strategy that substantially improved coverage.
+
+If the parser failures came from an implementation mistake:
+
+> We corrected the parser before evaluation. All reported coverage results use the corrected implementation.
+
+If the final system includes a separately designed and evaluated validation capability:
+
+> The input validator checks schema and conservation constraints before simulation; the ablation in Section 4.3 measures how these checks affect invalid-case detection.
+
+Do not use pre-correction results as a baseline. If an error changes published or submitted evidence, state what was affected, replace the evidence, and reassess the conclusion without presenting the correction as an advance.
+
+## 10. Optimize for humans and machines
 
 A human reader needs motivation, causal flow, and concrete language. An AI reader needs stable terms, explicit entities, denominators, and unambiguous references.
 
@@ -146,7 +178,7 @@ Avoid:
 
 > This improvement further confirms its substantial value under the selected setting.
 
-## 10. Preserve a human authorial voice
+## 11. Preserve a human authorial voice
 
 - Vary paragraph and sentence length naturally.
 - Use the terminology that practitioners actually use.
@@ -155,7 +187,7 @@ Avoid:
 - Let a paragraph end with its finding or consequence, not a generic claim of importance.
 - Do not over-polish direct technical prose into ornate academic language.
 
-## 11. Check the handoff between sentences
+## 12. Check the handoff between sentences
 
 Individually correct sentences can still form a paragraph that feels abrupt. For every adjacent pair, ask whether the first sentence gives the reader a reason to expect the concept introduced by the second.
 

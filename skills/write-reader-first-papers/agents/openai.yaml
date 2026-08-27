@@ -1,4 +1,4 @@
 interface:
   display_name: "Reader-First Paper Writing"
-  short_description: "Rewrite academic prose for clarity and human voice"
-  default_prompt: "Use $write-reader-first-papers to revise this manuscript for clear argument flow, direct language, natural authorial voice, and exact preservation of evidence."
+  short_description: "Clarify papers and protect contribution boundaries"
+  default_prompt: "Use $write-reader-first-papers to revise this manuscript for clear argument flow, direct language, natural authorial voice, exact preservation of evidence, and correct separation of final contributions from debugging effort or implementation corrections."
