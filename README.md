@@ -26,6 +26,12 @@ model-specific API.
 - Keeps English and Chinese versions aligned in meaning and claim strength.
 - Reviews abstracts, introductions, methods, results, conclusions, highlights,
   captions, supplementary information, cover letters, and rebuttals.
+- Audits whole theses or multi-file manuscripts line by line, producing located
+  findings with categories, diagnoses, and suggested rewrites, plus global checks
+  for terminology drift, abbreviation first use, and cross-chapter numbers.
+- Provides a catalog of recurring Chinese friction patterns: abstract verbs,
+  metaphor nouns, formulaic triplets, meta-narration, laboratory and software
+  jargon, undefined coinages, and ambiguous numeric phrasing.
 
 This is a writing and reasoning workflow. It does not attempt to evade AI
 detectors, disguise authorship, or invent a human writing history.
@@ -134,6 +140,8 @@ project’s corpus frequencies or treat its Chinese detection list as universal.
         ├── agents/
         │   └── openai.yaml
         └── references/
+            ├── chinese-friction-patterns.md
+            ├── long-document-audit.md
             ├── review-checklist.md
             ├── section-playbook.md
             └── style-rules.md

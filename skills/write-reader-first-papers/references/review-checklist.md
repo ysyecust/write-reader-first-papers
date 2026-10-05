@@ -31,6 +31,9 @@
 - [ ] Promotional and generic AI phrases have been removed or supported by metrics.
 - [ ] Paragraph openings and endings do not repeat a mechanical template.
 - [ ] Long sentences, passive voice, nominalization, questions, metaphors, repeated nouns, and sentence-length patterns were not changed merely because they were suspected AI tells.
+- [ ] Chinese prose was checked against the abstract-verb, metaphor-noun, triplet, meta-narration, laboratory-jargon, and software-vocabulary patterns in `chinese-friction-patterns.md`.
+- [ ] Each coined term keeps one meaning and is defined in plain language at first use, including separately in the abstract, contribution list, and conclusion.
+- [ ] Bold text in running prose marks defined terms only, not slogans.
 
 ## Claims and evidence
 
@@ -59,8 +62,20 @@
 
 - [ ] English and Chinese make the same claims with the same strength.
 - [ ] Terminology is consistent across main text, SI, figures, and tables.
+- [ ] Every abbreviation is defined before its first use in compile order across all files.
+- [ ] Symbols in the notation table carry one meaning each, or overloaded uses are renamed.
+- [ ] Headline numbers repeated in the abstract, contribution list, chapter summaries, conclusion, and appendices match, or the text explains the difference.
+- [ ] Ambiguous ratio wording (“快X倍”, “耗时比” without direction, “分别” without one-to-one mapping) has been resolved.
 - [ ] Main text and SI use compatible method, dataset, metric, condition, and experiment names.
 - [ ] Data paths, DOI, hashes, and repository descriptions are exact.
+
+## Long-document audits
+
+- [ ] The audited file list was derived from the build's include graph; generated bodies were excluded and hand-written captions were reviewed.
+- [ ] Every line of every compiled file was read; no chunk was sampled or skipped, and every reviewer report arrived complete.
+- [ ] Each finding records location, category, quoted fragment, diagnosis, and a concrete rewrite.
+- [ ] A term census, terminology table, abbreviation first-use pass, and numeric cross-check were run across the whole document.
+- [ ] At least ten cited locations were spot-checked against the current files, and no content file changed.
 
 ## Verification gates
 

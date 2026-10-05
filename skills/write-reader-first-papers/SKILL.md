@@ -1,6 +1,6 @@
 ---
 name: write-reader-first-papers
-description: Rewrite, restructure, translate, or audit academic manuscripts so first-time readers can identify the problem, contribution, evidence, value, and limitations without decoding internal jargon or formulaic prose. Use for English or Chinese papers, abstracts, introductions, methods, results, conclusions, highlights, captions, tables, supplementary information, cover letters, rebuttals, and bilingual synchronization when the user asks for clearer language, natural authorial voice, direct wording, “说人话”, removal of unnecessary “not X but Y” or “不是……而是……” constructions, reader-first organization, a final prose review, or a contribution audit that separates research and engineering contributions from implementation mistakes, debugging effort, and corrective maintenance.
+description: Rewrite, restructure, translate, or audit academic manuscripts so first-time readers can identify the problem, contribution, evidence, value, and limitations without decoding internal jargon or formulaic prose. Use for English or Chinese papers, theses, dissertations, abstracts, introductions, methods, results, conclusions, highlights, captions, tables, supplementary information, cover letters, rebuttals, and bilingual synchronization when the user asks for clearer language, natural authorial voice, direct wording, “说人话”, removal of unnecessary “not X but Y” or “不是……而是……” constructions, reader-first organization, a final prose review, an exhaustive located audit of AI-style, colloquial, or hard-to-read wording across a long manuscript, or a contribution audit that separates research and engineering contributions from implementation mistakes, debugging effort, and corrective maintenance.
 ---
 
 # Write Reader-First Papers
@@ -12,6 +12,10 @@ Write for a capable first-time reader. Make the scientific logic visible before 
 Read [references/style-rules.md](references/style-rules.md) before changing prose.
 
 Read [references/section-playbook.md](references/section-playbook.md) when editing front matter, reorganizing sections, shortening captions, or synchronizing Chinese and English.
+
+Read [references/chinese-friction-patterns.md](references/chinese-friction-patterns.md) when reviewing or revising Chinese prose, including the Chinese half of a bilingual document.
+
+Read [references/long-document-audit.md](references/long-document-audit.md) when the user asks for a complete, located list of prose problems in a thesis, dissertation, or other multi-file manuscript.
 
 Read [references/review-checklist.md](references/review-checklist.md) before the final handoff.
 
@@ -122,6 +126,8 @@ Do not polish every sentence into the same rhythm. Preserve natural variation an
 ## Output expectations
 
 When reviewing without edit authorization, provide prioritized findings with locations, supporting evidence, and recommended action. Do not include a rewritten manuscript unless the user requests one.
+
+For a complete audit of a long manuscript, follow [references/long-document-audit.md](references/long-document-audit.md): cover every compiled file, record each finding as location, category, quoted fragment, diagnosis, and suggested rewrite, place global issues (term census, terminology drift, abbreviation first use, numeric mismatches) before per-file lists, and spot-check cited locations before delivery.
 
 When editing files, provide:
 

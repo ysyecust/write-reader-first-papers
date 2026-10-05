@@ -23,6 +23,10 @@ Agent Skills 格式，不依赖脚本、网络服务或特定模型的 API。
 - 保持中英文版本在含义、数字和主张强度上的一致。
 - 审阅摘要、引言、方法、结果、结论、Highlights、图表说明、补充材料、
   Cover Letter 和审稿回复。
+- 对整本学位论文或多文件稿件逐行审读，给出带出处、类别、诊断和改写建议的
+  问题清单，并做术语漂移、缩写首次定义和跨章节数字一致性的全局检查。
+- 提供中文论文常见阅读障碍的模式清单：抽象动词、比喻性名词、三段式排比、
+  元叙述、实验室与软件工程行话、未定义的自造词以及有歧义的数字表述。
 
 这是一个写作与论证工作流。它不以规避 AI 检测、掩饰作者身份或制造所谓
 “人工写作痕迹”为目标。
@@ -120,6 +124,8 @@ Skill [lieflat-less-ai-tone](https://github.com/larashero3-dotcom/lieflat-less-a
         ├── agents/
         │   └── openai.yaml
         └── references/
+            ├── chinese-friction-patterns.md
+            ├── long-document-audit.md
             ├── review-checklist.md
             ├── section-playbook.md
             └── style-rules.md
